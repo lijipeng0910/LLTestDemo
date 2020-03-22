@@ -10,6 +10,8 @@
 		A1257A1F240658B50036D28B /* LLCategoryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1257A1D240658B50036D28B /* LLCategoryVC.m */; };
 		A1257A20240658B50036D28B /* LLCategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1257A1E240658B50036D28B /* LLCategoryVC.xib */; };
 		A1257A2324065F9A0036D28B /* LLCategoryVC+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = A1257A2224065F9A0036D28B /* LLCategoryVC+Add.m */; };
+		A1257A28240A6EE40036D28B /* LLLockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1257A26240A6EE40036D28B /* LLLockVC.m */; };
+		A1257A29240A6EE40036D28B /* LLLockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1257A27240A6EE40036D28B /* LLLockVC.xib */; };
 		A13CCAAE23C6FF1100368CDD /* LLAutoreleaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A13CCAAC23C6FF1100368CDD /* LLAutoreleaseVC.m */; };
 		A13CCAAF23C6FF1100368CDD /* LLAutoreleaseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A13CCAAD23C6FF1100368CDD /* LLAutoreleaseVC.xib */; };
 		A13CCAB223C8575500368CDD /* LLForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = A13CCAB123C8575500368CDD /* LLForwarding.m */; };
@@ -24,6 +26,14 @@
 		A1411AB523CDB6AE00C95E63 /* LLWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1411AB423CDB6AE00C95E63 /* LLWhiteView.m */; };
 		A1411AB823CDB6EC00C95E63 /* LLRedView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1411AB723CDB6EC00C95E63 /* LLRedView.m */; };
 		A1411ABB23CDB6F800C95E63 /* LLGreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1411ABA23CDB6F800C95E63 /* LLGreenView.m */; };
+		A1417762240AB028008599D9 /* LLKVOVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1417760240AB028008599D9 /* LLKVOVC.m */; };
+		A1417763240AB028008599D9 /* LLKVOVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1417761240AB028008599D9 /* LLKVOVC.xib */; };
+		A1417766240AB06E008599D9 /* LLPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = A1417765240AB06E008599D9 /* LLPerson.m */; };
+		A141776F24178770008599D9 /* LLTempTarget.m in Sources */ = {isa = PBXBuildFile; fileRef = A141776E24178770008599D9 /* LLTempTarget.m */; };
+		A14177722417D904008599D9 /* LLWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A14177712417D904008599D9 /* LLWeakProxy.m */; };
+		A143ABB32420565000CA30D4 /* LLHashVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A143ABB12420565000CA30D4 /* LLHashVC.m */; };
+		A143ABB42420565000CA30D4 /* LLHashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A143ABB22420565000CA30D4 /* LLHashVC.xib */; };
+		A143ABB72420566600CA30D4 /* LLKey.m in Sources */ = {isa = PBXBuildFile; fileRef = A143ABB62420566600CA30D4 /* LLKey.m */; };
 		A147D25523A9F4F80043EE85 /* LLBlockVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A147D25323A9F4F80043EE85 /* LLBlockVC.m */; };
 		A147D25623A9F4F80043EE85 /* LLBlockVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A147D25423A9F4F80043EE85 /* LLBlockVC.xib */; };
 		A147D25A23A9F5140043EE85 /* LLLoadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A147D25823A9F5140043EE85 /* LLLoadVC.m */; };
@@ -85,6 +95,9 @@
 		A1257A1E240658B50036D28B /* LLCategoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLCategoryVC.xib; sourceTree = "<group>"; };
 		A1257A2124065F9A0036D28B /* LLCategoryVC+Add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LLCategoryVC+Add.h"; sourceTree = "<group>"; };
 		A1257A2224065F9A0036D28B /* LLCategoryVC+Add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LLCategoryVC+Add.m"; sourceTree = "<group>"; };
+		A1257A25240A6EE40036D28B /* LLLockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLLockVC.h; sourceTree = "<group>"; };
+		A1257A26240A6EE40036D28B /* LLLockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLLockVC.m; sourceTree = "<group>"; };
+		A1257A27240A6EE40036D28B /* LLLockVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLLockVC.xib; sourceTree = "<group>"; };
 		A13CCAAB23C6FF1100368CDD /* LLAutoreleaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAutoreleaseVC.h; sourceTree = "<group>"; };
 		A13CCAAC23C6FF1100368CDD /* LLAutoreleaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAutoreleaseVC.m; sourceTree = "<group>"; };
 		A13CCAAD23C6FF1100368CDD /* LLAutoreleaseVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLAutoreleaseVC.xib; sourceTree = "<group>"; };
@@ -109,6 +122,20 @@
 		A1411AB723CDB6EC00C95E63 /* LLRedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLRedView.m; sourceTree = "<group>"; };
 		A1411AB923CDB6F800C95E63 /* LLGreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLGreenView.h; sourceTree = "<group>"; };
 		A1411ABA23CDB6F800C95E63 /* LLGreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLGreenView.m; sourceTree = "<group>"; };
+		A141775F240AB028008599D9 /* LLKVOVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLKVOVC.h; sourceTree = "<group>"; };
+		A1417760240AB028008599D9 /* LLKVOVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLKVOVC.m; sourceTree = "<group>"; };
+		A1417761240AB028008599D9 /* LLKVOVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLKVOVC.xib; sourceTree = "<group>"; };
+		A1417764240AB06E008599D9 /* LLPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPerson.h; sourceTree = "<group>"; };
+		A1417765240AB06E008599D9 /* LLPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLPerson.m; sourceTree = "<group>"; };
+		A141776D24178770008599D9 /* LLTempTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLTempTarget.h; sourceTree = "<group>"; };
+		A141776E24178770008599D9 /* LLTempTarget.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLTempTarget.m; sourceTree = "<group>"; };
+		A14177702417D904008599D9 /* LLWeakProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLWeakProxy.h; sourceTree = "<group>"; };
+		A14177712417D904008599D9 /* LLWeakProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLWeakProxy.m; sourceTree = "<group>"; };
+		A143ABB02420565000CA30D4 /* LLHashVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLHashVC.h; sourceTree = "<group>"; };
+		A143ABB12420565000CA30D4 /* LLHashVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLHashVC.m; sourceTree = "<group>"; };
+		A143ABB22420565000CA30D4 /* LLHashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLHashVC.xib; sourceTree = "<group>"; };
+		A143ABB52420566600CA30D4 /* LLKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLKey.h; sourceTree = "<group>"; };
+		A143ABB62420566600CA30D4 /* LLKey.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLKey.m; sourceTree = "<group>"; };
 		A147D25223A9F4F80043EE85 /* LLBlockVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLBlockVC.h; sourceTree = "<group>"; };
 		A147D25323A9F4F80043EE85 /* LLBlockVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLBlockVC.m; sourceTree = "<group>"; };
 		A147D25423A9F4F80043EE85 /* LLBlockVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLBlockVC.xib; sourceTree = "<group>"; };
@@ -211,6 +238,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		A1257A24240A6ECB0036D28B /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				A1257A25240A6EE40036D28B /* LLLockVC.h */,
+				A1257A26240A6EE40036D28B /* LLLockVC.m */,
+				A1257A27240A6EE40036D28B /* LLLockVC.xib */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		A13CCAAA23C6FEA100368CDD /* AutoreleasePool */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +278,18 @@
 				A13CCAB123C8575500368CDD /* LLForwarding.m */,
 			);
 			path = Runtime;
+			sourceTree = "<group>";
+		};
+		A143ABAF2420563700CA30D4 /* Hash */ = {
+			isa = PBXGroup;
+			children = (
+				A143ABB02420565000CA30D4 /* LLHashVC.h */,
+				A143ABB12420565000CA30D4 /* LLHashVC.m */,
+				A143ABB22420565000CA30D4 /* LLHashVC.xib */,
+				A143ABB52420566600CA30D4 /* LLKey.h */,
+				A143ABB62420566600CA30D4 /* LLKey.m */,
+			);
+			path = Hash;
 			sourceTree = "<group>";
 		};
 		A147D25123A9F4D40043EE85 /* Load */ = {
@@ -281,6 +330,10 @@
 				A147D26923AA0BFE0043EE85 /* LLTimerVC.xib */,
 				A147D26C23AA1D5B0043EE85 /* NSTimer+LLCycle.h */,
 				A147D26D23AA1D5B0043EE85 /* NSTimer+LLCycle.m */,
+				A141776D24178770008599D9 /* LLTempTarget.h */,
+				A141776E24178770008599D9 /* LLTempTarget.m */,
+				A14177702417D904008599D9 /* LLWeakProxy.h */,
+				A14177712417D904008599D9 /* LLWeakProxy.m */,
 			);
 			path = NSTimer;
 			sourceTree = "<group>";
@@ -344,6 +397,8 @@
 		A14C9B8023A86FF700CE9DB3 /* LLTest */ = {
 			isa = PBXGroup;
 			children = (
+				A143ABAF2420563700CA30D4 /* Hash */,
+				A1257A24240A6ECB0036D28B /* Lock */,
 				A1257A1B2406588C0036D28B /* Category */,
 				A160577023FEF13D00424A69 /* KVO */,
 				A13CCAAA23C6FEA100368CDD /* AutoreleasePool */,
@@ -437,6 +492,11 @@
 		A160577023FEF13D00424A69 /* KVO */ = {
 			isa = PBXGroup;
 			children = (
+				A141775F240AB028008599D9 /* LLKVOVC.h */,
+				A1417760240AB028008599D9 /* LLKVOVC.m */,
+				A1417761240AB028008599D9 /* LLKVOVC.xib */,
+				A1417764240AB06E008599D9 /* LLPerson.h */,
+				A1417765240AB06E008599D9 /* LLPerson.m */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -550,14 +610,17 @@
 				A13F644623C47C7F00DBDD35 /* LLRuntimeVC.xib in Resources */,
 				A14C9B9123A86FF900CE9DB3 /* LaunchScreen.storyboard in Resources */,
 				A14C9BC423A8C80B00CE9DB3 /* LLResponderVC.xib in Resources */,
+				A1257A29240A6EE40036D28B /* LLLockVC.xib in Resources */,
 				A14C9BBF23A8A84700CE9DB3 /* LLAlgorithmVC.xib in Resources */,
 				A13F644023C42C3B00DBDD35 /* LLRunloopVC.xib in Resources */,
 				A13D714F23C5A94300DFCFE7 /* LLSwizzlingVC.xib in Resources */,
 				A14C9B8E23A86FF900CE9DB3 /* Assets.xcassets in Resources */,
+				A143ABB42420565000CA30D4 /* LLHashVC.xib in Resources */,
 				A14C9BB723A8713200CE9DB3 /* ViewController.xib in Resources */,
 				A14C9B8C23A86FF700CE9DB3 /* Main.storyboard in Resources */,
 				A14BE38723BEDC2F0026646B /* LLLayoutVC.xib in Resources */,
 				A147D26B23AA0BFE0043EE85 /* LLTimerVC.xib in Resources */,
+				A1417763240AB028008599D9 /* LLKVOVC.xib in Resources */,
 				A14BE39323BF1B600026646B /* LLSingleVC.xib in Resources */,
 				A147D25B23A9F5140043EE85 /* LLLoadVC.xib in Resources */,
 				A147D25623A9F4F80043EE85 /* LLBlockVC.xib in Resources */,
@@ -587,6 +650,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14BE39E23BF43450026646B /* LLThreadVC.m in Sources */,
+				A141776F24178770008599D9 /* LLTempTarget.m in Sources */,
+				A14177722417D904008599D9 /* LLWeakProxy.m in Sources */,
 				A147D26A23AA0BFE0043EE85 /* LLTimerVC.m in Sources */,
 				A14BE39623BF1B720026646B /* LLSingleManager.m in Sources */,
 				A1411AB823CDB6EC00C95E63 /* LLRedView.m in Sources */,
@@ -596,10 +661,12 @@
 				A14C9BC323A8C80B00CE9DB3 /* LLResponderVC.m in Sources */,
 				A14C9BBE23A8A84700CE9DB3 /* LLAlgorithmVC.m in Sources */,
 				A14BE38623BEDC2F0026646B /* LLLayoutVC.m in Sources */,
+				A1417766240AB06E008599D9 /* LLPerson.m in Sources */,
 				A1257A1F240658B50036D28B /* LLCategoryVC.m in Sources */,
 				A14C9B8323A86FF700CE9DB3 /* AppDelegate.m in Sources */,
 				A13CCAB223C8575500368CDD /* LLForwarding.m in Sources */,
 				A1411ABB23CDB6F800C95E63 /* LLGreenView.m in Sources */,
+				A143ABB72420566600CA30D4 /* LLKey.m in Sources */,
 				A14C9BCA23A8C8B100CE9DB3 /* LLResponderBView.m in Sources */,
 				A13CCAAE23C6FF1100368CDD /* LLAutoreleaseVC.m in Sources */,
 				A14C9BC723A8C88F00CE9DB3 /* LLResponderAView.m in Sources */,
@@ -609,13 +676,16 @@
 				A13D715223C5D63000DFCFE7 /* UIButton+LLSwizzling.m in Sources */,
 				A147D25E23A9F5460043EE85 /* LLLoadAView.m in Sources */,
 				A13D714E23C5A94300DFCFE7 /* LLSwizzlingVC.m in Sources */,
+				A143ABB32420565000CA30D4 /* LLHashVC.m in Sources */,
 				A147D26123A9F5540043EE85 /* LLLoadBView.m in Sources */,
 				A14BE39223BF1B600026646B /* LLSingleVC.m in Sources */,
+				A1417762240AB028008599D9 /* LLKVOVC.m in Sources */,
 				A14BE38A23BEE2E50026646B /* LLLayoutView.m in Sources */,
 				A13F643F23C42C3B00DBDD35 /* LLRunloopVC.m in Sources */,
 				A14BE39923BF2EF90026646B /* LLBlockView.m in Sources */,
 				A1257A2324065F9A0036D28B /* LLCategoryVC+Add.m in Sources */,
 				A13D714A23C5A92A00DFCFE7 /* NSArray+LLSwizzling.m in Sources */,
+				A1257A28240A6EE40036D28B /* LLLockVC.m in Sources */,
 				A14BE38D23BF111B0026646B /* LLLayoutBView.m in Sources */,
 				A147D25523A9F4F80043EE85 /* LLBlockVC.m in Sources */,
 				A1411AB523CDB6AE00C95E63 /* LLWhiteView.m in Sources */,

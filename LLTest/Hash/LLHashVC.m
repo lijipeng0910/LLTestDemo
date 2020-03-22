@@ -1,28 +1,28 @@
 //
-//  LLLoadVC.m
+//  LLHashVC.m
 //  LLTest
 //
-//  Created by lijipeng on 2019/12/18.
-//  Copyright © 2019 lijipeng. All rights reserved.
+//  Created by lijipeng on 2020/3/17.
+//  Copyright © 2020 lijipeng. All rights reserved.
 //
 
-#import "LLLoadVC.h"
-#import "LLLoadAView.h"
-#import "LLLoadBView.h"
+#import "LLHashVC.h"
+#import "LLKey.h"
 
-@interface LLLoadVC ()
+@interface LLHashVC ()
 
 @end
 
-@implementation LLLoadVC
+@implementation LLHashVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-#pragma mark - 查看load、initialize调用过程
-    //LLLoadAView *a = [LLLoadAView new];
-    //[LLLoadAView share];
     
-    [LLLoadBView share];
+    NSMutableDictionary *dic = [NSMutableDictionary new];
+    LLKey *key = [[LLKey alloc] initWithKeyName:@"key"];
+    NSLog(@"key is %p", key);
+    [dic setObject:@"object" forKey:key];
+    NSLog(@"value is %@", dic[key]);
     // Do any additional setup after loading the view from its nib.
 }
 

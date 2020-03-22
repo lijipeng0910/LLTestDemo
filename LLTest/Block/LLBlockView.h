@@ -14,7 +14,7 @@ typedef void(^LLBlock)(void);
 
 @interface LLBlockView : UIView
 @property (nonatomic, copy) LLBlock myBlock;
-
+- (void)delayTest;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,17 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 #pragma mark - 查看hitTest如何调用
-    LLResponderAView *a = [[LLResponderAView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    LLResponderAView *a = [[LLResponderAView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     a.backgroundColor = [UIColor grayColor];
     [self.view addSubview:a];
-    
+
     LLResponderBView *b = [[LLResponderBView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
     b.backgroundColor = [UIColor lightGrayColor];
-    [a addSubview:b];
+    //[a addSubview:b];
     
     LLWhiteView *white= [[LLWhiteView alloc] initWithFrame:CGRectMake(0, 300, 200, 200)];
     white.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:white];
+    
+
     // Do any additional setup after loading the view from its nib.
 }
 

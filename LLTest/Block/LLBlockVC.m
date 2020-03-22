@@ -17,23 +17,23 @@
 
 @implementation LLBlockVC
 
+{
+    LLBlockView *bView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 #pragma mark - 测试__block修饰符，循环引用
     __block NSString *a = @"10";
     
+    __block NSMutableString * str = [[NSMutableString alloc]initWithString:@"Hello"];
     self.MyBlock = ^{
-        [self reloadBlock];
-//        self.myString = @"aaa";
-//        NSLog(@"%@",_myString);
+//        str = @"aaaa";
+//        NSLog(@"mu====%@",str);
     };
-//    self.MyBlock();
+    self.MyBlock();
+    NSLog(@"%@",self.MyBlock);
 
-//    self.MyBlock = ^{
-//        NSLog(@"%@",@(_myInteger));
-//    };
-//    self.MyBlock();
-    
     LLBlockView *b = [LLBlockView new];
     b.frame = CGRectMake(100, 100, 100, 100);
     b.backgroundColor = [UIColor grayColor];
@@ -41,9 +41,44 @@
     [self.view addSubview:b];
     NSLog(@"b retainCount %ld",CFGetRetainCount((__bridge CFTypeRef)(b)));
     b.myBlock = ^{
-        //[self reloadBlock];
+        [self reloadBlock];
     };
 
+    __block int count = 10;
+    void (^ blk)(void) = ^(){
+        count = 20;
+        NSLog(@"In Block:%d", count);//打印：In Block:20
+    };
+    blk();
+
+    count ++;
+    NSLog(@"Out Block:%d", count);//打印：Out Block:21
+    
+#pragma mark - 测试NSString指针地址以及内容地址
+    __block NSString *aa = @"aa";
+    NSLog(@"1---指针地址：%p,内容地址：%p,%@",&aa,aa,aa);
+    void (^ block)(void) = ^(){
+        NSLog(@"2---指针地址：%p,内容地址：%p,%@",&aa,aa,aa);
+        aa = @"aaa";
+        NSLog(@"3---指针地址：%p,内容地址：%p,%@",&aa,aa,aa);
+    };
+    block();
+    NSLog(@"4---指针地址：%p,内容地址：%p,%@",&aa,aa,aa);
+    aa = @"aaaa";
+    NSLog(@"5---指针地址：%p,内容地址：%p,%@",&aa,aa,aa);
+    
+#pragma mark - 测试NSMutableString指针地址以及内容地址
+    __block NSMutableString *maa = [NSMutableString stringWithString:@"maa"];
+    NSLog(@"1===指针地址：%p,内容地址：%p",&maa,maa);
+    void (^ mBlock)(void) = ^(){
+        NSLog(@"2===指针地址：%p,内容地址：%p",&maa,maa);
+        [maa stringByAppendingString:@"a"];
+        NSLog(@"3===指针地址：%p,内容地址：%p",&maa,maa);
+    };
+    mBlock();
+    NSLog(@"4===指针地址：%p,内容地址：%p",&maa,maa);
+    [maa stringByAppendingString:@"a"];
+    NSLog(@"5===指针地址：%p,内容地址：%p",&maa,maa);
     // Do any additional setup after loading the view from its nib.
 }
 

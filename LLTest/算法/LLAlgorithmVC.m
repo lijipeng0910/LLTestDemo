@@ -69,6 +69,9 @@
     
     //递归求和
     NSLog(@"sum=%d",[self sum:100]);
+    
+    //判断回文数
+    [self isPalindrome:121];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -104,6 +107,20 @@
     } else {
         return 1;
     }
+}
+
+- (BOOL)isPalindrome:(int)x
+{
+    // 负数的第一位带有负号'-'，所以一定不是回文数
+    // 长度超过一位的数字，第一位肯定不是 0，因此末尾是 0，则一定不是回文数
+    if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+    // 余下的代码，如果看不懂原理，就带入几个具体的数字，手工模拟运行过程，就很容易明白了
+    int revertedNumber = 0;
+    while (x > revertedNumber) {
+        revertedNumber = revertedNumber * 10 + x % 10;
+        x /= 10;
+    }
+    return x == revertedNumber || x == revertedNumber / 10;
 }
 
 /*

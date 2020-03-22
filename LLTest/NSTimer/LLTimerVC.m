@@ -8,6 +8,8 @@
 
 #import "LLTimerVC.h"
 #import "NSTimer+LLCycle.h"
+#import "LLTempTarget.h"
+#import "LLWeakProxy.h"
 
 @interface LLTimerVC ()
 
@@ -15,7 +17,6 @@
 
 @implementation LLTimerVC
 {
-    NSTimer *timer;
     NSTimer *ll_timer;
 }
 
@@ -28,20 +29,12 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    [timer invalidate];
-//    timer = nil;
-//
-//    [ll_timer invalidate];
-//    ll_timer = nil;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
-//    [timer fire];
-    
-#pragma mark - 测试NSTimer循环引用，如何解决
+#pragma mark - 测试NSTimer循环引用，如何解决（三种方式：category中间类、NSObject继承类、NSProxy继承类）
+    /*
     __weak LLTimerVC *weakSelf = self;
     ll_timer = [NSTimer ll_ScheduledTimerWithTimeInterval:1.0 repeats:YES block:^(NSTimer * _Nonnull timer) {
         //NSLog(@"unRetainCycle---timer");
@@ -49,6 +42,16 @@
         [strongSelf unRetainLog];
     }];
     [ll_timer fire];
+     */
+    
+    /*
+    ll_timer = [LLTempTarget ll_scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
+    [ll_timer fire];
+     */
+    
+    ll_timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[LLWeakProxy proxyWithTarget:self] selector:@selector(timerAction:) userInfo:nil repeats:YES];
+    [ll_timer fire];
+    
     // Do any additional setup after loading the view from its nib.
 }
 

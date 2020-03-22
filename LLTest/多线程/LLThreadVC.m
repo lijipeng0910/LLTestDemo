@@ -88,6 +88,7 @@
     });
      */
     
+    /*
     NSBlockOperation *op1 = [NSBlockOperation blockOperationWithBlock:^{
         sleep(1);
         NSLog(@"线程1");
@@ -104,7 +105,50 @@
     [op3 addDependency:op2];
     NSOperationQueue *queue = [NSOperationQueue new];
     [queue addOperations:@[op1,op2,op3] waitUntilFinished:NO];
-     
+     */
+    
+#pragma mark - 线程死锁
+    /*
+    NSLog(@"1");
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+     */
+    
+    /*
+    dispatch_queue_t serialQueue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(serialQueue, ^{
+        NSLog(@"begin");
+        dispatch_sync(serialQueue, ^{
+            NSLog(@"middle");
+        });
+        NSLog(@"end");
+    });
+    // 函数会返回，不影响主线程
+    NSLog(@"return");
+     */
+    
+    /*
+    dispatch_queue_t serialQueue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_SERIAL);
+    dispatch_async(serialQueue, ^{
+        NSLog(@"1");
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"2");
+        });
+        NSLog(@"%@",[NSThread currentThread]);
+        NSLog(@"3");
+    });
+    dispatch_async(serialQueue, ^{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"4");
+        });
+        NSLog(@"5");
+    });
+     */
+
+#pragma mark - 根据上面的代码，可以看出有关dispatch的对象并不是OC对象，那么，用不用像对待CoreFoundation框架的对象一样，使用retain/release来管理呢？答案是不用的！如果是ARC环境，我们无需管理，会像对待OC对象一样自动内存管理。如果是MRC环境，不是使用retain/release，而是使用dispatch_retain/dispatch_release来管理
+
     // Do any additional setup after loading the view from its nib.
 }
 
