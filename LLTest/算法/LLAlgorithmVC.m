@@ -7,7 +7,7 @@
 //
 
 #import "LLAlgorithmVC.h"
-
+#import <WebKit/WebKit.h>
 @interface LLAlgorithmVC ()
 
 @end
@@ -23,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSMutableArray * arr = @[@3,@2,@5].mutableCopy;
+    NSMutableArray * arr = @[@7,@6,@3,@1,@2,@5,@4].mutableCopy;
     int arrCount = (int)arr.count;
     /*冒泡排序
     for (int i = 0; i < arrCount-1; i++) {
@@ -38,7 +38,7 @@
      */
     
     /*选择排序
-    for (int i = 0; i < arrCount; i++) {
+    for (int i = 0; i < arrCount-1; i++) {
         int min = i;
         for (int j = i+1; j < arrCount; j++) {
             if ([arr[min] intValue]>[arr[j] intValue]) {
@@ -96,6 +96,7 @@
         NSLog(@"2===%@",array);
     }
     array[i] = @(key);
+    NSLog(@"3===%@",array);
     [self quickSortArray:array leftIndex:leftIndex rightIndex:i-1];
     [self quickSortArray:array leftIndex:i+1 rightIndex:rightIndex];
 }

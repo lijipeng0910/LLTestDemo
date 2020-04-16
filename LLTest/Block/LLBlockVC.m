@@ -33,6 +33,16 @@
     };
     self.MyBlock();
     NSLog(@"%@",self.MyBlock);
+    
+    __weak typeof(self) weakSelf = self;
+    self.MyBlock = ^{
+        __strong typeof(self) strongSelf = weakSelf;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [strongSelf reloadBlock];
+        });
+    };
+    self.MyBlock();
+
 
     LLBlockView *b = [LLBlockView new];
     b.frame = CGRectMake(100, 100, 100, 100);
@@ -40,8 +50,12 @@
     NSLog(@"b retainCount %ld",CFGetRetainCount((__bridge CFTypeRef)(b)));
     [self.view addSubview:b];
     NSLog(@"b retainCount %ld",CFGetRetainCount((__bridge CFTypeRef)(b)));
+    LLBlockView *c = b;
+    NSLog(@"b retainCount %ld",CFGetRetainCount((__bridge CFTypeRef)(b)));
+    NSLog(@"c retainCount %ld",CFGetRetainCount((__bridge CFTypeRef)(c)));
+
     b.myBlock = ^{
-        [self reloadBlock];
+//        [self reloadBlock];
     };
 
     __block int count = 10;

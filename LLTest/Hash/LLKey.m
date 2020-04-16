@@ -11,7 +11,7 @@
 @implementation LLKey
 - (instancetype)initWithKeyName:(NSString *)keyName {
     if (self = [super init]) {
-       _keyName  = keyName;
+       _keyName = keyName;
     }
     return self;
 }

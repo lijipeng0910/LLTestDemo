@@ -23,6 +23,12 @@
 #import "LLLockVC.h"
 #import "LLKVOVC.h"
 #import "LLHashVC.h"
+#import "LLCacheVC.h"
+#import "LLSQLiteVC.h"
+#import "LLFPS.h"
+#import "LLAsyncVC.h"
+#import "LLTiledVC.h"
+#import "LLMVPVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tb;
@@ -46,7 +52,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash"].mutableCopy;
+    self.title = @"DEMO";
+    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash",@"NSCache",@"SQLite",@"FPS",@"异步绘制",@"CATiledLayer",@"MVP"].mutableCopy;
     // Do any additional setup after loading the view.
 }
 
@@ -72,7 +79,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC"];
+    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC",@"LLCacheVC",@"LLSQLiteVC",@"LLFPSVC",@"LLAsyncVC",@"LLTiledVC",@"LLMVPVC"];
     UIViewController *vc = [NSClassFromString(classArr[indexPath.row]) new];
     vc.title = classArr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
