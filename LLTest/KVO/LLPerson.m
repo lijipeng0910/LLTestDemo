@@ -13,6 +13,7 @@
 @end
 
 @implementation LLPerson
+//@synthesize age = _age;
 
 - (void)setAge:(NSInteger)age
 {

@@ -7,7 +7,7 @@
 //
 
 #import "LLLockVC.h"
-#define max(a,b)  (a>b?a:b)
+
 @interface LLLockVC ()
 @property (nonatomic, strong) NSMutableArray *mArr;
 @end
@@ -36,18 +36,65 @@
     secondT = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerAction:) userInfo:nil repeats:YES];
     [secondT fire];
      */
-
-    NSMutableArray *mArr = @[@"1"].mutableCopy;
+    
+    /*
     dispatch_queue_t queue = dispatch_queue_create("11", DISPATCH_QUEUE_CONCURRENT);
     dispatch_async(queue, ^{
-        for (int i = 0; i < 1000; i++) {
-            NSLog(@"mArr = %@",mArr);
+        for (int i = 0; i < 10000; i++) {
+            [self addAction];
         }
     });
-    dispatch_barrier_async(queue, ^{
-        [mArr addObject:@"2"];
-        NSLog(@"111mArr = %@",mArr);
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 10000; i++) {
+            [self addAction];
+        }
     });
+     */
+    
+    /*
+    // dispatch_semaphore加锁
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);// 如果改为1，理解wait的作用
+         
+    __block int j = 0;
+    dispatch_async(queue, ^{
+         j = 100;
+         dispatch_semaphore_signal(semaphore);
+    });
+         
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+    NSLog(@"finish j = %d", j);
+     */
+    
+    // NSLock加锁
+    NSLock *lock = [[NSLock alloc] init];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lock];
+        //[lock lockBeforeDate:[NSDate date]];
+        NSLog(@"需要线程同步的操作1 开始");
+        sleep(2);
+        NSLog(@"需要线程同步的操作1 结束");
+        [lock unlock];
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        sleep(1);
+        if ([lock tryLock]) {//尝试获取锁，如果获取不到返回NO，不会阻塞该线程
+            NSLog(@"锁可用的操作");
+            [lock unlock];
+        }else{
+            NSLog(@"锁不可用的操作");
+        }
+        
+        NSDate *date = [[NSDate alloc] initWithTimeIntervalSinceNow:3];
+        if ([lock lockBeforeDate:date]) {//尝试在未来的3s内获取锁，并阻塞该线程，如果3s内获取不到恢复线程, 返回NO,不会阻塞该线程
+            NSLog(@"没有超时，获得锁");
+            [lock unlock];
+        }else{
+            NSLog(@"超时，没有获得锁");
+        }
+    });
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -60,6 +107,13 @@
         [self.mArr addObject:@"2"];
         NSLog(@"second %@", _mArr);
     }
+}
+
+- (void)addAction
+{
+    static int i = 0;
+    i++;
+    NSLog(@"%d",i);
 }
 
 /*

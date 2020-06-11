@@ -13,14 +13,50 @@
 #import "LLMigration.h"
 
 @interface LLSQLiteVC ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tb;
+@property (strong, nonatomic) NSMutableArray *arr;
 @end
 
 @implementation LLSQLiteVC
 
+- (NSMutableArray *)arr
+{
+    if (!_arr) {
+        _arr = [NSMutableArray array];
+    }
+    return _arr;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self reloadAllData];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)reloadAllData
+{
+    //获取全部数据
+    NSArray *dbArray = [[DPDatabaseManager sharedDBManager]getAllDataWithModelClass:[LLModel class] withFileName:@"textDemo"];
+    [self.arr addObjectsFromArray:dbArray];
+    [self.tb reloadData];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.arr.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    LLModel *model = [self.arr objectAtIndex:indexPath.row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"姓名:%@ 年龄:%ld 是否成仙:%@",model.userName,model.userAge,model.isAdult?@"是":@"否"];
+    return cell;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

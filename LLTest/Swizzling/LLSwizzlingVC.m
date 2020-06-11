@@ -8,11 +8,19 @@
 
 #import "LLSwizzlingVC.h"
 #import "UIButton+LLSwizzling.h"
+
 @interface LLSwizzlingVC ()
 
 @end
 
 @implementation LLSwizzlingVC
+
+- (void)loadView
+{
+    UIView *view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    view.backgroundColor = [UIColor greenColor];
+    self.view = view;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

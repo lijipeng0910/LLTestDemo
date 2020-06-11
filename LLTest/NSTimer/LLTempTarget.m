@@ -25,4 +25,9 @@
         [self.weakTimer invalidate];
     }
 }
+
+- (void)dealloc
+{
+    NSLog(@"LLTempTarget---dealloc");
+}
 @end

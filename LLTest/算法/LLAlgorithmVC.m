@@ -7,7 +7,7 @@
 //
 
 #import "LLAlgorithmVC.h"
-#import <WebKit/WebKit.h>
+
 @interface LLAlgorithmVC ()
 
 @end
@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     NSMutableArray * arr = @[@7,@6,@3,@1,@2,@5,@4].mutableCopy;
     int arrCount = (int)arr.count;
     /*冒泡排序
@@ -72,6 +72,10 @@
     
     //判断回文数
     [self isPalindrome:121];
+    
+    //取两个数组的交集
+    NSArray *result = [self intersectArr1:@[@1,@2,@3] arr2:@[@2,@3,@4]];
+    NSLog(@"交集%@",result);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -122,6 +126,31 @@
         x /= 10;
     }
     return x == revertedNumber || x == revertedNumber / 10;
+}
+
+- (NSArray *)intersectArr1:(NSArray *)arr1 arr2:(NSArray *)arr2
+{
+    NSArray *tempArr1 = [arr1 sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+    NSArray *tempArr2 = [arr2 sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+    int i = 0;
+    int j = 0;
+    NSMutableArray *result = [NSMutableArray array];
+    while (i < tempArr1.count && j < tempArr2.count) {
+        if ([tempArr2[j] intValue] > [tempArr1[i] intValue]) {
+            i++;
+        } else if ([tempArr2[j] intValue] < [tempArr1[i] intValue]) {
+            j++;
+        } else {
+            [result addObject:tempArr1[i]];
+            i++;
+            j++;
+        }
+    }
+    return [result copy];
 }
 
 /*

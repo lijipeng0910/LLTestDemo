@@ -2,17 +2,22 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
+  - WebViewJavascriptBridge (6.0.3)
 
 DEPENDENCIES:
   - FMDB
+  - WebViewJavascriptBridge
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - WebViewJavascriptBridge
   trunk:
     - FMDB
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
 
-PODFILE CHECKSUM: b865a7064a4fffa57e2d85c365303ba33e2c6236
+PODFILE CHECKSUM: 6052f3cf6f1d60bf62f9c4b7ed479434989d2656
 
 COCOAPODS: 1.9.1

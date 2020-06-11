@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
 #pragma mark - 测试多个异步任务完成后如何合并处理
     /*
     dispatch_group_t group = dispatch_group_create();
@@ -132,8 +133,10 @@
     /*
     dispatch_queue_t serialQueue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_SERIAL);
     dispatch_async(serialQueue, ^{
+        NSLog(@"%@",[NSThread currentThread]);
         NSLog(@"1");
         dispatch_sync(dispatch_get_main_queue(), ^{
+            NSLog(@"%@",[NSThread currentThread]);
             NSLog(@"2");
         });
         NSLog(@"%@",[NSThread currentThread]);

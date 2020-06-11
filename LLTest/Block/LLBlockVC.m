@@ -23,6 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+#pragma mark - 查看block是否在栈区
+    int stack = 0;
+    NSLog(@"stack block %@", [^{NSLog(@"%d", stack);} class]);
+    
 #pragma mark - 测试__block修饰符，循环引用
     __block NSString *a = @"10";
     

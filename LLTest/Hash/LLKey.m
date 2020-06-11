@@ -27,7 +27,7 @@
 }
 
 - (nonnull id)copyWithZone:(nullable NSZone *)zone {
-    NSLog(@"copy funcr");
+    NSLog(@"copy func");
     LLKey *key = [[LLKey alloc] initWithKeyName:self.keyName];
     NSLog(@"copy is %p", key);
     return key;

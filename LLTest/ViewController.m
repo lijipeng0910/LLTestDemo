@@ -29,6 +29,11 @@
 #import "LLAsyncVC.h"
 #import "LLTiledVC.h"
 #import "LLMVPVC.h"
+#import "LLWKWebViewVC.h"
+#import "LLUIWebViewVC.h"
+#import "LLFactoryVC.h"
+#import "LLAbstractVC.h"
+#import "LLTransformVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tb;
@@ -53,7 +58,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"DEMO";
-    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash",@"NSCache",@"SQLite",@"FPS",@"异步绘制",@"CATiledLayer",@"MVP"].mutableCopy;
+    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash",@"NSCache",@"SQLite",@"FPS",@"异步绘制",@"CATiledLayer",@"MVP",@"WKWebView",@"UIWebView",@"工厂方法模式",@"抽象工厂模式",@"字典转模型"].mutableCopy;
+    
+    NSBundle *mainBundle = [NSBundle mainBundle];
+    NSLog(@"main===%@",mainBundle);
     // Do any additional setup after loading the view.
 }
 
@@ -79,7 +87,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC",@"LLCacheVC",@"LLSQLiteVC",@"LLFPSVC",@"LLAsyncVC",@"LLTiledVC",@"LLMVPVC"];
+    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC",@"LLCacheVC",@"LLSQLiteVC",@"LLFPSVC",@"LLAsyncVC",@"LLTiledVC",@"LLMVPVC",@"LLWKWebViewVC",@"LLUIWebViewVC",@"LLFactoryVC",@"LLAbstractVC",@"LLTransformVC"];
     UIViewController *vc = [NSClassFromString(classArr[indexPath.row]) new];
     vc.title = classArr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];

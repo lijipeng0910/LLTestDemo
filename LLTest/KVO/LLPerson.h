@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 - (void)setAge:(NSInteger)age;
 - (NSInteger)age;
+//@property (nonatomic, assign) NSInteger age;
 @end
 
 NS_ASSUME_NONNULL_END
