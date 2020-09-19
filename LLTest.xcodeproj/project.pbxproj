@@ -124,6 +124,20 @@
 		A14C9BC423A8C80B00CE9DB3 /* LLResponderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A14C9BC223A8C80B00CE9DB3 /* LLResponderVC.xib */; };
 		A14C9BC723A8C88F00CE9DB3 /* LLResponderAView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14C9BC623A8C88F00CE9DB3 /* LLResponderAView.m */; };
 		A14C9BCA23A8C8B100CE9DB3 /* LLResponderBView.m in Sources */ = {isa = PBXBuildFile; fileRef = A14C9BC923A8C8B100CE9DB3 /* LLResponderBView.m */; };
+		A1F3E393249F73E900B88BBA /* LLMultiDelegateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E391249F73E900B88BBA /* LLMultiDelegateVC.m */; };
+		A1F3E394249F73E900B88BBA /* LLMultiDelegateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3E392249F73E900B88BBA /* LLMultiDelegateVC.xib */; };
+		A1F3E39A249F973400B88BBA /* LLMultiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E399249F973400B88BBA /* LLMultiManager.m */; };
+		A1F3E39F24A0550900B88BBA /* LLLRUVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E39D24A0550900B88BBA /* LLLRUVC.m */; };
+		A1F3E3A024A0550900B88BBA /* LLLRUVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3E39E24A0550900B88BBA /* LLLRUVC.xib */; };
+		A1F3E3A324A0552900B88BBA /* LLLRUDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3A224A0552900B88BBA /* LLLRUDictionary.m */; };
+		A1F3E3A624A5F79B00B88BBA /* LLSwizzlingVC+LL.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3A524A5F79B00B88BBA /* LLSwizzlingVC+LL.m */; };
+		A1F3E3AD24A6225A00B88BBA /* LLSwizzlingTempVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3AB24A6225A00B88BBA /* LLSwizzlingTempVC.m */; };
+		A1F3E3AE24A6225A00B88BBA /* LLSwizzlingTempVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3E3AC24A6225A00B88BBA /* LLSwizzlingTempVC.xib */; };
+		A1F3E3B324A89C8A00B88BBA /* LLMultiInheritVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3B124A89C8A00B88BBA /* LLMultiInheritVC.m */; };
+		A1F3E3B424A89C8A00B88BBA /* LLMultiInheritVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3E3B224A89C8A00B88BBA /* LLMultiInheritVC.xib */; };
+		A1F3E3B724A89CCB00B88BBA /* LLProgrammer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3B624A89CCB00B88BBA /* LLProgrammer.m */; };
+		A1F3E3BA24A89D0300B88BBA /* LLDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3B924A89D0300B88BBA /* LLDrawer.m */; };
+		A1F3E3BD24A89F3F00B88BBA /* LLSinger.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F3E3BC24A89F3F00B88BBA /* LLSinger.m */; };
 		A1FE1248246283DE00A8D4FE /* LLUIWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A1FE1246246283DE00A8D4FE /* LLUIWebViewVC.m */; };
 		A1FE1249246283DE00A8D4FE /* LLUIWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1FE1247246283DE00A8D4FE /* LLUIWebViewVC.xib */; };
 		A1FE124B246284CA00A8D4FE /* UIWebViewMessageHandler.html in Resources */ = {isa = PBXBuildFile; fileRef = A1FE124A246284CA00A8D4FE /* UIWebViewMessageHandler.html */; };
@@ -359,6 +373,30 @@
 		A14C9BC623A8C88F00CE9DB3 /* LLResponderAView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLResponderAView.m; sourceTree = "<group>"; };
 		A14C9BC823A8C8B100CE9DB3 /* LLResponderBView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLResponderBView.h; sourceTree = "<group>"; };
 		A14C9BC923A8C8B100CE9DB3 /* LLResponderBView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLResponderBView.m; sourceTree = "<group>"; };
+		A1F3E390249F73E900B88BBA /* LLMultiDelegateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMultiDelegateVC.h; sourceTree = "<group>"; };
+		A1F3E391249F73E900B88BBA /* LLMultiDelegateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMultiDelegateVC.m; sourceTree = "<group>"; };
+		A1F3E392249F73E900B88BBA /* LLMultiDelegateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLMultiDelegateVC.xib; sourceTree = "<group>"; };
+		A1F3E398249F973400B88BBA /* LLMultiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMultiManager.h; sourceTree = "<group>"; };
+		A1F3E399249F973400B88BBA /* LLMultiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMultiManager.m; sourceTree = "<group>"; };
+		A1F3E39C24A0550900B88BBA /* LLLRUVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLLRUVC.h; sourceTree = "<group>"; };
+		A1F3E39D24A0550900B88BBA /* LLLRUVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLLRUVC.m; sourceTree = "<group>"; };
+		A1F3E39E24A0550900B88BBA /* LLLRUVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLLRUVC.xib; sourceTree = "<group>"; };
+		A1F3E3A124A0552900B88BBA /* LLLRUDictionary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLLRUDictionary.h; sourceTree = "<group>"; };
+		A1F3E3A224A0552900B88BBA /* LLLRUDictionary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLLRUDictionary.m; sourceTree = "<group>"; };
+		A1F3E3A424A5F79B00B88BBA /* LLSwizzlingVC+LL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LLSwizzlingVC+LL.h"; sourceTree = "<group>"; };
+		A1F3E3A524A5F79B00B88BBA /* LLSwizzlingVC+LL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LLSwizzlingVC+LL.m"; sourceTree = "<group>"; };
+		A1F3E3AA24A6225A00B88BBA /* LLSwizzlingTempVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSwizzlingTempVC.h; sourceTree = "<group>"; };
+		A1F3E3AB24A6225A00B88BBA /* LLSwizzlingTempVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSwizzlingTempVC.m; sourceTree = "<group>"; };
+		A1F3E3AC24A6225A00B88BBA /* LLSwizzlingTempVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLSwizzlingTempVC.xib; sourceTree = "<group>"; };
+		A1F3E3B024A89C8A00B88BBA /* LLMultiInheritVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLMultiInheritVC.h; sourceTree = "<group>"; };
+		A1F3E3B124A89C8A00B88BBA /* LLMultiInheritVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLMultiInheritVC.m; sourceTree = "<group>"; };
+		A1F3E3B224A89C8A00B88BBA /* LLMultiInheritVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLMultiInheritVC.xib; sourceTree = "<group>"; };
+		A1F3E3B524A89CCB00B88BBA /* LLProgrammer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLProgrammer.h; sourceTree = "<group>"; };
+		A1F3E3B624A89CCB00B88BBA /* LLProgrammer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLProgrammer.m; sourceTree = "<group>"; };
+		A1F3E3B824A89D0300B88BBA /* LLDrawer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDrawer.h; sourceTree = "<group>"; };
+		A1F3E3B924A89D0300B88BBA /* LLDrawer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLDrawer.m; sourceTree = "<group>"; };
+		A1F3E3BB24A89F3F00B88BBA /* LLSinger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSinger.h; sourceTree = "<group>"; };
+		A1F3E3BC24A89F3F00B88BBA /* LLSinger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSinger.m; sourceTree = "<group>"; };
 		A1FE1245246283DE00A8D4FE /* LLUIWebViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLUIWebViewVC.h; sourceTree = "<group>"; };
 		A1FE1246246283DE00A8D4FE /* LLUIWebViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLUIWebViewVC.m; sourceTree = "<group>"; };
 		A1FE1247246283DE00A8D4FE /* LLUIWebViewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LLUIWebViewVC.xib; sourceTree = "<group>"; };
@@ -676,6 +714,11 @@
 				A13D714B23C5A94300DFCFE7 /* LLSwizzlingVC.h */,
 				A13D714C23C5A94300DFCFE7 /* LLSwizzlingVC.m */,
 				A13D714D23C5A94300DFCFE7 /* LLSwizzlingVC.xib */,
+				A1F3E3AA24A6225A00B88BBA /* LLSwizzlingTempVC.h */,
+				A1F3E3AB24A6225A00B88BBA /* LLSwizzlingTempVC.m */,
+				A1F3E3AC24A6225A00B88BBA /* LLSwizzlingTempVC.xib */,
+				A1F3E3A424A5F79B00B88BBA /* LLSwizzlingVC+LL.h */,
+				A1F3E3A524A5F79B00B88BBA /* LLSwizzlingVC+LL.m */,
 			);
 			path = Swizzling;
 			sourceTree = "<group>";
@@ -847,6 +890,9 @@
 		A14C9B8023A86FF700CE9DB3 /* LLTest */ = {
 			isa = PBXGroup;
 			children = (
+				A1F3E39B24A0549E00B88BBA /* LRU */,
+				A1F3E3AF24A89BE200B88BBA /* 多继承 */,
+				A1F3E38F249F6B8900B88BBA /* 多代理 */,
 				A148854B2488EFBB008F320A /* 字典转模型 */,
 				A14884C7247D22E8008F320A /* 抽象工厂 */,
 				A14884CA247D22E8008F320A /* 工厂方法 */,
@@ -962,6 +1008,46 @@
 				A1417765240AB06E008599D9 /* LLPerson.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		A1F3E38F249F6B8900B88BBA /* 多代理 */ = {
+			isa = PBXGroup;
+			children = (
+				A1F3E390249F73E900B88BBA /* LLMultiDelegateVC.h */,
+				A1F3E391249F73E900B88BBA /* LLMultiDelegateVC.m */,
+				A1F3E392249F73E900B88BBA /* LLMultiDelegateVC.xib */,
+				A1F3E398249F973400B88BBA /* LLMultiManager.h */,
+				A1F3E399249F973400B88BBA /* LLMultiManager.m */,
+			);
+			path = "多代理";
+			sourceTree = "<group>";
+		};
+		A1F3E39B24A0549E00B88BBA /* LRU */ = {
+			isa = PBXGroup;
+			children = (
+				A1F3E39C24A0550900B88BBA /* LLLRUVC.h */,
+				A1F3E39D24A0550900B88BBA /* LLLRUVC.m */,
+				A1F3E39E24A0550900B88BBA /* LLLRUVC.xib */,
+				A1F3E3A124A0552900B88BBA /* LLLRUDictionary.h */,
+				A1F3E3A224A0552900B88BBA /* LLLRUDictionary.m */,
+			);
+			path = LRU;
+			sourceTree = "<group>";
+		};
+		A1F3E3AF24A89BE200B88BBA /* 多继承 */ = {
+			isa = PBXGroup;
+			children = (
+				A1F3E3B024A89C8A00B88BBA /* LLMultiInheritVC.h */,
+				A1F3E3B124A89C8A00B88BBA /* LLMultiInheritVC.m */,
+				A1F3E3B224A89C8A00B88BBA /* LLMultiInheritVC.xib */,
+				A1F3E3B524A89CCB00B88BBA /* LLProgrammer.h */,
+				A1F3E3B624A89CCB00B88BBA /* LLProgrammer.m */,
+				A1F3E3B824A89D0300B88BBA /* LLDrawer.h */,
+				A1F3E3B924A89D0300B88BBA /* LLDrawer.m */,
+				A1F3E3BB24A89F3F00B88BBA /* LLSinger.h */,
+				A1F3E3BC24A89F3F00B88BBA /* LLSinger.m */,
+			);
+			path = "多继承";
 			sourceTree = "<group>";
 		};
 		A1FE1244246283BB00A8D4FE /* UIWebView */ = {
@@ -1116,8 +1202,12 @@
 				A14885562488FA8C008F320A /* LLTransformVC.xib in Resources */,
 				A130954B2448347D00A1FFA8 /* WKWebViewMessageHandler.html in Resources */,
 				A147D25623A9F4F80043EE85 /* LLBlockVC.xib in Resources */,
+				A1F3E3A024A0550900B88BBA /* LLLRUVC.xib in Resources */,
+				A1F3E394249F73E900B88BBA /* LLMultiDelegateVC.xib in Resources */,
+				A1F3E3B424A89C8A00B88BBA /* LLMultiInheritVC.xib in Resources */,
 				A14884EF247D4E97008F320A /* LLFactoryVC.xib in Resources */,
 				A13CCAAF23C6FF1100368CDD /* LLAutoreleaseVC.xib in Resources */,
+				A1F3E3AE24A6225A00B88BBA /* LLSwizzlingTempVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1185,6 +1275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A14884E1247D2508008F320A /* LLCarProduct.m in Sources */,
+				A1F3E3A624A5F79B00B88BBA /* LLSwizzlingVC+LL.m in Sources */,
 				A13095432447F8DF00A1FFA8 /* LLPresenter.m in Sources */,
 				A14BE39E23BF43450026646B /* LLThreadVC.m in Sources */,
 				A13094B3243C50AC00A1FFA8 /* LLFPS.m in Sources */,
@@ -1199,6 +1290,7 @@
 				A130949924362C2300A1FFA8 /* DPDatabaseManager.m in Sources */,
 				A147D25A23A9F5140043EE85 /* LLLoadVC.m in Sources */,
 				A147D26E23AA1D5B0043EE85 /* NSTimer+LLCycle.m in Sources */,
+				A1F3E3BA24A89D0300B88BBA /* LLDrawer.m in Sources */,
 				A14884EA247D2659008F320A /* LLBikeProduct.m in Sources */,
 				A1FE1248246283DE00A8D4FE /* LLUIWebViewVC.m in Sources */,
 				A13094A524362D6400A1FFA8 /* LLMigration.m in Sources */,
@@ -1209,6 +1301,7 @@
 				A1488505247D5643008F320A /* LLAbstractVC.m in Sources */,
 				A14C9BBE23A8A84700CE9DB3 /* LLAlgorithmVC.m in Sources */,
 				A14BE38623BEDC2F0026646B /* LLLayoutVC.m in Sources */,
+				A1F3E39F24A0550900B88BBA /* LLLRUVC.m in Sources */,
 				A1417766240AB06E008599D9 /* LLPerson.m in Sources */,
 				A1257A1F240658B50036D28B /* LLCategoryVC.m in Sources */,
 				A14C9B8323A86FF700CE9DB3 /* AppDelegate.m in Sources */,
@@ -1217,6 +1310,8 @@
 				A13CCAB223C8575500368CDD /* LLForwarding.m in Sources */,
 				A1411ABB23CDB6F800C95E63 /* LLGreenView.m in Sources */,
 				A143ABB72420566600CA30D4 /* LLKey.m in Sources */,
+				A1F3E3B724A89CCB00B88BBA /* LLProgrammer.m in Sources */,
+				A1F3E3BD24A89F3F00B88BBA /* LLSinger.m in Sources */,
 				A14885552488FA8C008F320A /* LLTransformVC.m in Sources */,
 				A14C9BCA23A8C8B100CE9DB3 /* LLResponderBView.m in Sources */,
 				A14884E7247D2644008F320A /* LLBikeFactory.m in Sources */,
@@ -1242,13 +1337,17 @@
 				A13094AF243C507500A1FFA8 /* LLFPSVC.m in Sources */,
 				A13D714E23C5A94300DFCFE7 /* LLSwizzlingVC.m in Sources */,
 				A14884FE247D531C008F320A /* LLMeatProduct.m in Sources */,
+				A1F3E3A324A0552900B88BBA /* LLLRUDictionary.m in Sources */,
 				A143ABB32420565000CA30D4 /* LLHashVC.m in Sources */,
 				A147D26123A9F5540043EE85 /* LLLoadBView.m in Sources */,
 				A14BE39223BF1B600026646B /* LLSingleVC.m in Sources */,
+				A1F3E393249F73E900B88BBA /* LLMultiDelegateVC.m in Sources */,
 				A1417762240AB028008599D9 /* LLKVOVC.m in Sources */,
 				A14BE38A23BEE2E50026646B /* LLLayoutView.m in Sources */,
+				A1F3E3B324A89C8A00B88BBA /* LLMultiInheritVC.m in Sources */,
 				A13F643F23C42C3B00DBDD35 /* LLRunloopVC.m in Sources */,
 				A13095382447F73400A1FFA8 /* LLMVPVC.m in Sources */,
+				A1F3E3AD24A6225A00B88BBA /* LLSwizzlingTempVC.m in Sources */,
 				A14BE39923BF2EF90026646B /* LLBlockView.m in Sources */,
 				A1257A2324065F9A0036D28B /* LLCategoryVC+Add.m in Sources */,
 				A13D714A23C5A92A00DFCFE7 /* NSArray+LLSwizzling.m in Sources */,
@@ -1257,6 +1356,7 @@
 				A14884FB247D5306008F320A /* LLFishFactory.m in Sources */,
 				A1257A28240A6EE40036D28B /* LLLockVC.m in Sources */,
 				A14BE38D23BF111B0026646B /* LLLayoutBView.m in Sources */,
+				A1F3E39A249F973400B88BBA /* LLMultiManager.m in Sources */,
 				A14884F2247D51B3008F320A /* LLAbstractFactory.m in Sources */,
 				A147D25523A9F4F80043EE85 /* LLBlockVC.m in Sources */,
 				A1411AB523CDB6AE00C95E63 /* LLWhiteView.m in Sources */,

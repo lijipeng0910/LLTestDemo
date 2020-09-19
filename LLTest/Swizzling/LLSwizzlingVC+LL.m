@@ -1,15 +1,15 @@
 //
-//  UIViewController+LLSwizzling.m
+//  LLSwizzlingVC+LL.m
 //  LLTest
 //
-//  Created by lijipeng on 2019/12/18.
-//  Copyright © 2019 lijipeng. All rights reserved.
+//  Created by lijipeng on 2020/6/26.
+//  Copyright © 2020 lijipeng. All rights reserved.
 //
 
-#import "UIViewController+LLSwizzling.h"
+#import "LLSwizzlingVC+LL.h"
 #import <objc/runtime.h>
 
-@implementation UIViewController (LLSwizzling)
+@implementation LLSwizzlingVC (LL)
 //load方法会在类第一次加载的时候被调用
 //调用的时间比较靠前，适合在这个方法里做方法交换
 + (void)load{
@@ -17,9 +17,9 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //获得viewController的生命周期方法的selector
-        SEL willSel = @selector(viewWillAppear:);
+        SEL willSel = @selector(instanceAction:);
         //自己实现的将要被交换的方法的selector
-        SEL swizzWillSel = @selector(swizz_viewWillAppear:);
+        SEL swizzWillSel = @selector(swizz_instanceAction:);
         //两个方法的Method
         Method willMethod = class_getInstanceMethod([self class], willSel);
         Method swizzWillMethod = class_getInstanceMethod([self class], swizzWillSel);
@@ -36,11 +36,11 @@
     });
 }
 
-- (void)swizz_viewWillAppear:(BOOL)animated{
+- (void)swizz_instanceAction:(UIButton *)sender{
     //这时候调用自己，看起来像是死循环
     //但是其实自己的实现已经被替换了
-    [self swizz_viewWillAppear:animated];
-    NSLog(@"UIViewController_swizzling---%@",NSStringFromClass([self class]));
+    [self swizz_instanceAction:sender];
+    NSLog(@"LLSwizzlingVC_swizzling---%@",NSStringFromClass([self class]));
 }
 
 @end

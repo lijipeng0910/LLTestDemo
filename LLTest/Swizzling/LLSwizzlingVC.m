@@ -35,12 +35,14 @@
     [instanceBtn addTarget:self action:@selector(instanceAction:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:instanceBtn];
     instanceBtn.acceptEventInterval = 3;
+    
+    [self instanceAction:instanceBtn];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)instanceAction:(UIButton *)sender
 {
-    NSLog(@"被点击");
+    NSLog(@"父类被点击");
 }
 
 /*

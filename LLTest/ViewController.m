@@ -34,6 +34,9 @@
 #import "LLFactoryVC.h"
 #import "LLAbstractVC.h"
 #import "LLTransformVC.h"
+#import "LLMultiDelegateVC.h"
+#import "LLMultiInheritVC.h"
+#import "LLLRUVC.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tb;
@@ -58,7 +61,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"DEMO";
-    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash",@"NSCache",@"SQLite",@"FPS",@"异步绘制",@"CATiledLayer",@"MVP",@"WKWebView",@"UIWebView",@"工厂方法模式",@"抽象工厂模式",@"字典转模型"].mutableCopy;
+    self.arr = @[@"算法",@"响应者链",@"Block",@"Load",@"NSTimer",@"Layout",@"单例",@"多线程",@"Runloop",@"Runtime",@"Swizzling",@"AutoreleasePool",@"Category",@"Lock",@"KVO",@"Hash",@"NSCache",@"SQLite",@"FPS",@"异步绘制",@"CATiledLayer",@"MVP",@"WKWebView",@"UIWebView",@"工厂方法模式",@"抽象工厂模式",@"字典转模型",@"多代理",@"多继承",@"LRU"].mutableCopy;
     
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSLog(@"main===%@",mainBundle);
@@ -87,7 +90,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC",@"LLCacheVC",@"LLSQLiteVC",@"LLFPSVC",@"LLAsyncVC",@"LLTiledVC",@"LLMVPVC",@"LLWKWebViewVC",@"LLUIWebViewVC",@"LLFactoryVC",@"LLAbstractVC",@"LLTransformVC"];
+    NSArray *classArr = @[@"LLAlgorithmVC",@"LLResponderVC",@"LLBlockVC",@"LLLoadVC",@"LLTimerVC",@"LLLayoutVC",@"LLSingleVC",@"LLThreadVC",@"LLRunloopVC",@"LLRuntimeVC",@"LLSwizzlingVC",@"LLAutoreleaseVC",@"LLCategoryVC",@"LLLockVC",@"LLKVOVC",@"LLHashVC",@"LLCacheVC",@"LLSQLiteVC",@"LLFPSVC",@"LLAsyncVC",@"LLTiledVC",@"LLMVPVC",@"LLWKWebViewVC",@"LLUIWebViewVC",@"LLFactoryVC",@"LLAbstractVC",@"LLTransformVC",@"LLMultiDelegateVC",@"LLMultiInheritVC",@"LLLRUVC"];
     UIViewController *vc = [NSClassFromString(classArr[indexPath.row]) new];
     vc.title = classArr[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];

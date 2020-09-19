@@ -1,7 +1,10 @@
 #import "SceneDelegate.h"
 #import "ViewController.h"
 
-@interface SceneDelegate ()
+#pragma mark - 测试多代理
+#import "LLMultiManager.h"
+
+@interface SceneDelegate ()<LLMultiDelegate>
 
 @end
 
@@ -18,8 +21,15 @@
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[ViewController new]];
     [self.window makeKeyAndVisible];
+    
+    [[LLMultiManager shareManager] ll_addDelegate:self];
 }
 
+#pragma mark - LLMultiDelegate
+- (void)ll_multiDoSomething
+{
+    NSLog(@"多代理---1");
+}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.

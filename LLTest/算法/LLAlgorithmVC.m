@@ -76,6 +76,10 @@
     //取两个数组的交集
     NSArray *result = [self intersectArr1:@[@1,@2,@3] arr2:@[@2,@3,@4]];
     NSLog(@"交集%@",result);
+
+    //数组分组
+    NSArray *group = [self sortArrayGroup];
+    NSLog(@"分组%@",group);
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -150,7 +154,28 @@
             j++;
         }
     }
-    return [result copy];
+    return result.copy;
+}
+
+- (NSArray *)sortArrayGroup
+{
+    NSArray *temp = @[@"红",@"蓝",@"黄",@"黄",@"蓝",@"红",@"红"];
+    NSMutableArray *arr = [NSMutableArray array];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    for (int i = 0; i < temp.count; i++) {
+        if (!dic[temp[i]]) {
+            [arr addObject:temp[i]];
+            dic[temp[i]] = temp[i];
+        } else {
+            for (int j = 0; j < arr.count; j++) {
+                if ([temp[i] isEqual:arr[j]]) {
+                    [arr insertObject:temp[i] atIndex:j+1];
+                    break;
+                }
+            }
+        }
+    }
+    return arr.copy;
 }
 
 /*

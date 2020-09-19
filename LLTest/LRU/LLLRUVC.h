@@ -1,8 +1,8 @@
 //
-//  LLSwizzlingVC.h
+//  LLLRUVC.h
 //  LLTest
 //
-//  Created by lijipeng on 2020/1/8.
+//  Created by lijipeng on 2020/6/22.
 //  Copyright © 2020 lijipeng. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LLSwizzlingVC : UIViewController
-- (void)instanceAction:(UIButton *)sender;
+@interface LLLRUVC : UIViewController
+
 @end
 
 NS_ASSUME_NONNULL_END
